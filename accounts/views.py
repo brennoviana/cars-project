@@ -7,7 +7,7 @@ from django.contrib.auth.forms import AuthenticationForm
 
 class UserLoginView(LoginView):
     template_name = 'accounts/login.html'
-    authentication_form = AuthenticationForm
+    form_class = AuthenticationForm
 
 class UserRegisterView(CreateView):
     form_class = RegisterForm
