@@ -50,7 +50,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'middleware.authentication_middleware.LoginRequiredMiddleware',
-
 ]
 
 ROOT_URLCONF = 'CarsProject.urls'
