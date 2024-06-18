@@ -9,5 +9,13 @@
 </head>
 <body>
     <h1>Hello krl</h1>
+    {% if user.is_authenticated %}
+        <form method="post" action="{% url 'logout' %}">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+    {% else %}
+        <a href="{% url 'login' %}">Login</a>
+    {% endif %}
 </body>
 </html>
