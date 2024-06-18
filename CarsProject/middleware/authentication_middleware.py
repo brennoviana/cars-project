@@ -9,7 +9,7 @@ class LoginRequiredMiddleware:
         
     def __call__(self, request):
         path = request.path_info
-        print(path)
+        
         if not request.user.is_authenticated:
             if path == '/':
                 return redirect(settings.LOGIN_URL)

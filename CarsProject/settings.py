@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'middleware.authentication_middleware.LoginRequiredMiddleware',
+    'CarsProject.middleware.authentication_middleware.LoginRequiredMiddleware',
 ]
 
 ROOT_URLCONF = 'CarsProject.urls'
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'CarsProject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'CarsProject/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,3 +133,7 @@ STATIC_URL = '/static/'
 LOGIN_URL = '/accounts/login/'
 
 LOGIN_REDIRECT_URL = '/cars/'
+
+# DEBUG = False
+
+# ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
