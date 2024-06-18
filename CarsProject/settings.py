@@ -137,3 +137,5 @@ LOGIN_REDIRECT_URL = '/cars/'
 # DEBUG = False
 
 # ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+
+STATICFILES_DIRS = [BASE_DIR / 'CarsProject/static']
