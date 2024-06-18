@@ -12,7 +12,7 @@ class UserLoginView(LoginView):
 class UserRegisterView(CreateView):
     form_class = RegisterForm
     template_name = 'accounts/register.html'
-    # success_url = reverse_lazy('home')
+    success_url = reverse_lazy('cars')
 
     def form_valid(self, form):
         valid = super(UserRegisterView, self).form_valid(form)
