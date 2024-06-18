@@ -7,7 +7,7 @@ class LoginRequiredMiddleware:
         self.get_response = get_response
 
     def __call__(self, request):
-        if not request.user.is_authenticated and resolve(request.path_info).url_name != 'login':
+        if not request.user.is_authenticated and not resolve(request.path_info).url_name in ['login', 'logout', 'register'] and not request.path.startswith('/static/'):
             return redirect(settings.LOGIN_URL)
         response = self.get_response(request)
         return response
