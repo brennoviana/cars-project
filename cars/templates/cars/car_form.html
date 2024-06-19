@@ -12,12 +12,15 @@
 <body>
     <header class="header">
         <h1>Car Management</h1>
-        {% if user.is_authenticated %}
-            <form method="post" action="{% url 'logout' %}" class="logout-form">
-                {% csrf_token %}
-                <button type="submit" class="logout-button">Logout</button>
-            </form>
-        {% endif %}
+        <div class="header-right">
+            <a href="http://localhost:3000/" class="external-link">Go to Chat</a>
+            {% if user.is_authenticated %}
+                <form method="post" action="{% url 'logout' %}" class="logout-form">
+                    {% csrf_token %}
+                    <button type="submit" class="logout-button">Logout</button>
+                </form>
+            {% endif %}
+        </div>
     </header>
     <div class="container">
         <h2>{{ form.instance.pk|yesno:"Edit Car,Add New Car" }}</h2>
