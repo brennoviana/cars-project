@@ -25,6 +25,7 @@
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Save</button>
+            <a href="{% url 'cars' %}" class="cancel-button">Cancel</a>
         </form>
     </div>
 </body>

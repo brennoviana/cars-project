@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-        font-family: 'Roboto', Arial, sans-serif;
-        background-color: #f4f4f4;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        color: #333;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
 }
 
+/* Header */
 .header {
     background: #fff;
     padding: 10px 20px;
@@ -50,7 +51,7 @@ body {
     background: #c9302c;
 }
 
-
+/* Container */
 .container {
     background: #fff;
     padding: 20px;
@@ -58,11 +59,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 320px;
     box-sizing: border-box;
-    margin: 100px auto 20px auto; 
+    margin: 100px auto 20px auto; /* Ajustar para compensar o cabeçalho fixo */
     text-align: center;
 }
 
-
+/* Heading */
 h1, h2 {
     margin-bottom: 20px;
 }
@@ -71,7 +72,7 @@ h2 {
     font-size: 2em;
 }
 
-
+/* Links */
 a {
     color: #007BFF;
     text-decoration: none;
@@ -81,7 +82,7 @@ a:hover {
     text-decoration: underline;
 }
 
-
+/* Form */
 form {
     display: flex;
     flex-direction: column;
@@ -112,7 +113,7 @@ form button:hover {
     background: #4cae4c;
 }
 
-
+/* Add Car Button */
 .add-car-button {
     display: inline-block;
     padding: 10px 20px;
@@ -129,7 +130,25 @@ form button:hover {
     background: #4cae4c;
 }
 
+/* Cancel Button */
+.cancel-button {
+    font-size: 0.8em;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #d9534f;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
 
+.cancel-button:hover {
+    background: #c9302c;
+}
+
+/* Messages */
 .message {
     text-align: center;
     margin-top: 20px;
@@ -144,7 +163,7 @@ form button:hover {
     text-decoration: underline;
 }
 
-
+/* Feedback Styles */
 .success-message, .error-message {
     text-align: center;
     padding: 10px;
@@ -162,7 +181,7 @@ form button:hover {
     color: #a94442;
 }
 
-
+/* List Styles */
 ul.item-list {
     list-style: none;
     padding: 0;
@@ -193,7 +212,7 @@ ul.item-list li a:hover {
     text-decoration: underline;
 }
 
-
+/* Responsive Styles */
 @media (max-width: 600px) {
     .header {
         flex-direction: column;
