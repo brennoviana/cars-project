@@ -59,7 +59,7 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 
 1. Navegue até o diretório do frontend:
     ```bash
-    cd ../frontend
+    cd ChatProject/frontend
     ```
 
 2. Instale as dependências do frontend:
