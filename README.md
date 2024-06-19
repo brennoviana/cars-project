@@ -9,6 +9,13 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 - Python 3.10 ou superior
 - Node.js e npm
 
+## Configuração do Docker
+
+1. Ative o docker-compose
+    ```bash
+    docker-compose up -d
+    ```
+
 ## Configuração do Backend
 
 1. Clone o repositório e navegue até o diretório do projeto:
@@ -44,12 +51,7 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
     cd ChatProject/backend
     ```
 
-7. Em outra janela do terminal, certifique-se de que o ambiente virtual ainda está ativo e instale as dependências do FastAPI:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-8. Execute o servidor FastAPI:
+7. Execute o servidor FastAPI:
     ```bash
     uvicorn main:app --reload --port 8080
     ```
@@ -92,7 +94,6 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 - `python manage.py migrate`
 - `python manage.py runserver`
 - `cd ChatProject/backend`
-- `pip install -r ChatProject/backend/requirements.txt`
 - `uvicorn main:app --reload --port 8080`
 - `cd ../frontend`
 - `npm install`
