@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    {% load static %}
-    <title>Cars</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'global/css/styles.css' %}">
-    <link rel="icon" type="image/png" href="{% static 'global/images/car.png' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'cars/css/styles.css' %}">
+    <title>Car List</title>
 </head>
 <body>
-    <h1>Hello krl</h1>
-    {% if user.is_authenticated %}
-        <form method="post" action="{% url 'logout' %}">
-            {% csrf_token %}
-            <button type="submit">Logout</button>
-        </form>
-    {% else %}
-        <a href="{% url 'login' %}">Login</a>
-    {% endif %}
+    <h1>Car List</h1>
+    <a href="{% url 'car_create' %}">Add New Car</a>
+    <ul>
+        {% for car in cars %}
+        <li>
+            {{ car.year }} {{ car.make }} {{ car.model }} - 
+            <a href="{% url 'car_update' car.pk %}">Edit</a> | 
+            <a href="{% url 'car_delete' car.pk %}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
