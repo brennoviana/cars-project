@@ -12,12 +12,11 @@ class UserLoginView(LoginView):
 class UserRegisterView(CreateView):
     form_class = RegisterForm
     template_name = 'accounts/register.html'
-    success_url = reverse_lazy('cars')
+    success_url = reverse_lazy('login')
 
     def form_valid(self, form):
         valid = super(UserRegisterView, self).form_valid(form)
         username = form.cleaned_data.get('username')
         raw_password = form.cleaned_data.get('password1')
         user = authenticate(username=username, password=raw_password)
-        login(self.request, user)
         return valid
