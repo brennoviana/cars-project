@@ -12,6 +12,7 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 ## Configuração do Docker
 
 1. Ative o docker-compose:
+
     ```bash
     docker-compose up -d
     ```
