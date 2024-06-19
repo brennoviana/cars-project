@@ -7,70 +7,12 @@ body {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; 
     height: 100vh;
     background-color: #f4f4f4;
 }
 
-.container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 320px;
-    box-sizing: border-box; 
-}
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form input {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: calc(100% - 22px); 
-    box-sizing: border-box; 
-}
-
-form button {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #5cb85c;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    width: 100%; 
-    box-sizing: border-box; 
-}
-
-form button:hover {
-    background: #4cae4c;
-}
-
-.message {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.message a {
-    color: #5cb85c;
-    text-decoration: none;
-}
-
-.message a:hover {
-    text-decoration: underline;
-}
-
-/* Header */
 .header {
     background: #fff;
     padding: 10px 20px;
@@ -109,7 +51,6 @@ form button:hover {
     background: #c9302c;
 }
 
-
 @media (max-width: 600px) {
     .header {
         flex-direction: column;
@@ -119,4 +60,63 @@ form button:hover {
     .header h1 {
         margin-bottom: 10px;
     }
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    box-sizing: border-box;
+    margin: 100px auto 20px auto; 
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #5cb85c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form button:hover {
+    background: #4cae4c;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.message a {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.message a:hover {
+    text-decoration: underline;
 }
