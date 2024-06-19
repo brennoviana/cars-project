@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
+    {% load static %}
     <title>Confirm Delete</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'global/css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'cars/css/styles.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'global/images/car.png' %}">
 </head>
 <body>
-    <h1>Are you sure you want to delete "{{ car }}"?</h1>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit">Confirm</button>
-    </form>
-    <a href="{% url 'cars' %}">Cancel</a>
+    <header class="header">
+        <h1>Car Management</h1>
+        {% if user.is_authenticated %}
+            <form method="post" action="{% url 'logout' %}" class="logout-form">
+                {% csrf_token %}
+                <button type="submit" class="logout-button">Logout</button>
+            </form>
+        {% else %}
+            <a href="{% url 'login' %}">Login</a>
+        {% endif %}
+    </header>
+    <div class="container">
+        <h2>Confirm Delete</h2>
+        <p>Are you sure you want to delete "{{ car }}"?</p>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit">Confirm</button>
+        </form>
+        <a href="{% url 'cars' %}">Cancel</a>
+    </div>
 </body>
 </html>

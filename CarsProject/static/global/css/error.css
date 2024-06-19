@@ -1,31 +1,146 @@
 body {
-   font-family: Arial, sans-serif;
-   background-color: #f4f4f4;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   height: 100vh;
-   margin: 0;
-   color: #333;
-}
-
-.container {
-      text-align: center;
-}
-
-h1 {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: #333;
+  }
+  
+  .container {
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      box-sizing: border-box;
+      margin: 20px auto;
+      text-align: center; 
+  }
+  
+  h1 {
       font-size: 3em;
-}
-
-p {
+  }
+  
+  h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+  }
+  
+  p {
       font-size: 1.2em;
-}
-
-a {
+  }
+  
+  a {
       color: #007BFF;
       text-decoration: none;
-}
-
-a:hover {
+  }
+  
+  a:hover {
       text-decoration: underline;
-}
+  }
+  
+  form {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  form input, form select, form textarea {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: calc(100% - 22px);
+      box-sizing: border-box;
+  }
+  
+  form button {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #5cb85c;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      box-sizing: border-box;
+  }
+  
+  form button:hover {
+      background: #4cae4c;
+  }
+  
+  .message {
+      text-align: center;
+      margin-top: 20px;
+  }
+  
+  .message a {
+      color: #5cb85c;
+      text-decoration: none;
+  }
+  
+  .message a:hover {
+      text-decoration: underline;
+  }
+  
+  .success-message, .error-message {
+      text-align: center;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+  }
+  
+  .success-message {
+      background: #dff0d8;
+      color: #3c763d;
+  }
+  
+  .error-message {
+      background: #f2dede;
+      color: #a94442;
+  }
+  
+  ul.item-list {
+      list-style: none;
+      padding: 0;
+  }
+  
+  ul.item-list li {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  
+  ul.item-list li:hover {
+      background: #f1f1f1;
+  }
+  
+  ul.item-list li a {
+      color: #5cb85c;
+      text-decoration: none;
+      margin: 0 5px;
+  }
+  
+  ul.item-list li a:hover {
+      text-decoration: underline;
+  }
+  
+  @media (max-width: 600px) {
+      .container {
+          width: 100%;
+          padding: 10px;
+      }
+  
+      form input, form select, form textarea {
+          width: calc(100% - 12px);
+      }
+  }
+  
