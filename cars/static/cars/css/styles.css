@@ -57,7 +57,7 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 320px;
+    width: 400px;
     box-sizing: border-box;
     margin: 100px auto 20px auto; /* Ajustar para compensar o cabeçalho fixo */
     text-align: center;
@@ -132,10 +132,11 @@ form button:hover {
 
 /* Cancel Button */
 .cancel-button {
+    width: 100%;
     font-size: 0.8em;
     display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 10px 0px;
+    margin-top: 6px;
     background: #d9534f;
     color: white;
     font-weight: bold;
@@ -145,6 +146,64 @@ form button:hover {
 }
 
 .cancel-button:hover {
+    background: #c9302c;
+}
+
+/* Car Item */
+.car-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.car-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.car-info p {
+    margin: 0;
+    color: #666;
+}
+
+.car-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-button,
+.delete-button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.edit-button {
+    background: #5bc0de;
+    color: white;
+}
+
+.edit-button:hover {
+    background: #31b0d5;
+}
+
+.delete-button {
+    background: #d9534f;
+    color: white;
+}
+
+.delete-button:hover {
     background: #c9302c;
 }
 
@@ -181,37 +240,6 @@ form button:hover {
     color: #a94442;
 }
 
-/* List Styles */
-ul.item-list {
-    list-style: none;
-    padding: 0;
-}
-
-ul.item-list li {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-ul.item-list li:hover {
-    background: #f1f1f1;
-}
-
-ul.item-list li a {
-    color: #5cb85c;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-ul.item-list li a:hover {
-    text-decoration: underline;
-}
-
 /* Responsive Styles */
 @media (max-width: 600px) {
     .header {
@@ -230,5 +258,23 @@ ul.item-list li a:hover {
 
     form input, form select, form textarea {
         width: calc(100% - 12px);
+    }
+
+    .car-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .car-actions {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .edit-button,
+    .delete-button {
+        margin-bottom: 0;
+        width: 48%;
     }
 }
