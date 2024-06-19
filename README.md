@@ -9,14 +9,6 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
 - Python 3.10 ou superior
 - Node.js e npm
 
-## Configuração do Docker
-
-1. Ative o docker-compose:
-
-    ```bash
-    docker-compose up -d
-    ```
-
 ## Configuração do Backend
 
 1. Clone o repositório e navegue até o diretório do projeto:
@@ -25,34 +17,40 @@ Certifique-se de ter os seguintes softwares instalados em sua máquina:
     cd ChatProject
     ```
 
-2. Crie um ambiente virtual:
+2. Ative o docker-compose:
+
+    ```bash
+    docker-compose up -d
+    ```
+
+3. Crie um ambiente virtual:
     ```bash
     python3 -m venv venv
     ```
 
-3. Ative o ambiente virtual:
+4. Ative o ambiente virtual:
     ```bash
     source venv/bin/activate
     ```
 
-4. Instale as dependências do backend:
+5. Instale as dependências do backend:
     ```bash
     pip install -r requirements.txt
     ```
 
-5. Execute as migrações e inicie o servidor Django:
+6. Execute as migrações e inicie o servidor Django:
     ```bash
     python manage.py makemigrations
     python manage.py migrate
     python manage.py runserver
     ```
 
-6. Navegue até o diretório do backend:
+7. Navegue até o diretório do backend:
     ```bash
     cd ChatProject/backend
     ```
 
-7. Execute o servidor FastAPI:
+8. Execute o servidor FastAPI:
     ```bash
     uvicorn main:app --reload --port 8080
     ```
